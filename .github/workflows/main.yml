@@ -143,13 +143,13 @@ jobs:
     - name: "Build Project"
       shell: bash
       run: |
-        cmake --build "build/temp" --config RelWithDebInfo --target INSTALL
+        cmake --build "build/temp" --config RelWithDebInfo --target install
     - name: "Package Project"
       shell: bash
       run: |
         mkdir build/package
-        cmake --build "build/temp" --config RelWithDebInfo --target PACKAGE_7Z
-        cmake --build "build/temp" --config RelWithDebInfo --target PACKAGE_ZIP
+        cmake --build "build/temp" --config RelWithDebInfo --target package_7z
+        cmake --build "build/temp" --config RelWithDebInfo --target package_zip
     - name: "Upload Artifacts"
       uses: actions/upload-artifact@v1
       with:
