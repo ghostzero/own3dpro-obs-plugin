@@ -450,7 +450,7 @@ void own3d::ui::installer::handle_download_status(uint64_t now_bytes, uint64_t t
 		update_progress(0, false, false, false);
 		break;
 	case download_state::DOWNLOADING:
-		DLOG_DEBUG("Download of Theme '%s' at %llu/%llu...", _theme_name.toStdString().c_str(), now_bytes, total_bytes);
+		DLOG_DEBUG("Download of Theme '%s' at %lu/%lu...", _theme_name.toStdString().c_str(), now_bytes, total_bytes);
 		update_progress(static_cast<double_t>(now_bytes) / static_cast<double_t>(total_bytes), true, false, false);
 		break;
 	case download_state::DONE:
